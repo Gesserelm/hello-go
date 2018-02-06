@@ -49,6 +49,9 @@ build:
         code: |
           cp -R ./ ${WERCKER_OUTPUT_DIR}
 deploy:
+  box: 
+    id: golang    
+  
   steps:
     - internal/docker-push:
       username: $DOCKER_USERNAME
